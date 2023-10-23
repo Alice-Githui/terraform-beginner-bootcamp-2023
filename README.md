@@ -46,6 +46,21 @@ gp env HELLO
 
 You can also set env vars in [gitpod.yml](gitpod.yml) but this can only contain non-sensitive environmment variables
 
+#### AWS CLI INSTALLATION
+AWS CLI is installed for this project via the bash script [`./bin/install_aws_cli`](./bin/install_aws_cli)
+- [Getting Started - Install AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+- [Configure AWS CLI environmnet variables](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
+We can check if our AWS credentials are configured correctly by running the following AWS CLI command:
+```sh 
+aws sts get-caller-credentials
+```
+- [Debugging: How to fix AWS CLI Error: Unable to Locate Credentials](https://www.learnaws.org/2023/09/09/fix-aws-cli-error-unable-to-locate-credentials/)
+
+If it is successful, you should see a json paylod. 
+
+We'll need to generate AWS CLI credentials from IAM user to use with the AWS CLI
+
 
 
 
