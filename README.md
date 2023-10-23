@@ -61,6 +61,35 @@ If it is successful, you should see a json paylod.
 
 We'll need to generate AWS CLI credentials from IAM user to use with the AWS CLI
 
+### BASIC ACTIONS IN TERRAFORM
+
+#### Terraform Registry
+Terraform sources their modules and registry from the Terraform Registry which is located at 
+[registry.terrform.io](https://registry.terraform.io/)
+
+- Providers is an interface to APIs that allows us to create resources in specific cloud providers in terraform
+```
+We used for this case study [Random Terraform Provider](https://registry.terraform.io/providers/hashicorp/random/latest/docs)
+```
+- Modules are a way to refactor/make large amount of terraform code modular, portable and shareable
+
+### Terraform Console
+We can see a list of all the Terraform commands by typing terraform
+
+#### 
+- **Terraform init**  initializes a terraform project and downloads the binaries of the terraform providers that we use for this project
+
+`terraform plan`
+- **Terraform plan**  generates a changeset about the state of our infrastructure and what will be changed. We can output this changeset i.e. "plan"
+to be passed to an apply but this can be ignored
+
+`terraform apply`
+- **Terraform apply**  runs the plan and passes the changeset to be executed by terraform. Apply should prompt us yes or no. If we want to automatically approve an apply, we can provide tha auto-approve plan e.g. `terraform apply --auto-approve`
+
+#### Terraform Lock Files
+
+
+
 
 
 
