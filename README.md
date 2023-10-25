@@ -86,7 +86,12 @@ to be passed to an apply but this can be ignored
 `terraform apply`
 - **Terraform apply**  runs the plan and passes the changeset to be executed by terraform. Apply should prompt us yes or no. If we want to automatically approve an apply, we can provide tha auto-approve plan e.g. `terraform apply --auto-approve`
 
+#### Terraform Destroy
+- `terraform destroy` destroys terraform resources
+
 #### Terraform Lock Files
+
+
 
 
 
