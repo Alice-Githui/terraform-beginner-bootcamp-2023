@@ -1,15 +1,15 @@
 # Terraform Beginner Bootcamp 2023
 
 ## Table of Contents
-- [Installing the Terraform CLI](#nstall-the-terraform-cli)
-- [Refactoring bash scripts](#efectoring-the-bash-scripts)
-- [Linux Permissions](#considerations-for-linux-installations)
-- [Gitpod Lifecycles](#gitpod-lifecycles-before-init-command)
-- [Environment variables](#environment-variables)
-- [Scoping environment variables](#scoping-of-env-vars)
-- [Persisting environment variables in gitpod](#persisiting-env-vars-in-gitpod)
-- [AWS CLI Instalation](#aws-cli-installation)
-- [Basic actions in Terraform](#basic-actions-in-terraform)
+- [Installing the Terraform CLI](https://github.com/Alice-Githui/terraform-beginner-bootcamp-2023/blob/main/journals/week0.md#install-the-terraform-cli)
+- [Refactoring bash scripts](https://github.com/Alice-Githui/terraform-beginner-bootcamp-2023/blob/main/journals/week0.md#refectoring-the-bash-scripts)
+- [Linux Permissions](https://github.com/Alice-Githui/terraform-beginner-bootcamp-2023/blob/main/journals/week0.md#considerations-for-linux-installations)
+- [Gitpod Lifecycles](https://github.com/Alice-Githui/terraform-beginner-bootcamp-2023/blob/main/journals/week0.md#gitpod-lifecycles-before-init-command)
+- [Environment variables](https://github.com/Alice-Githui/terraform-beginner-bootcamp-2023/blob/main/journals/week0.md#environment-variables)
+- [Scoping environment variables](https://github.com/Alice-Githui/terraform-beginner-bootcamp-2023/blob/main/journals/week0.md#scoping-of-env-vars)
+- [Persisting environment variables in gitpod](https://github.com/Alice-Githui/terraform-beginner-bootcamp-2023/blob/main/journals/week0.md#persisiting-env-vars-in-gitpod)
+- [AWS CLI Instalation](https://github.com/Alice-Githui/terraform-beginner-bootcamp-2023/blob/main/journals/week0.md#aws-cli-installation)
+- [Basic actions in Terraform](https://github.com/Alice-Githui/terraform-beginner-bootcamp-2023/blob/main/journals/week0.md#basic-actions-in-terraform)
 
 **helpful links**
 
