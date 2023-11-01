@@ -1,5 +1,16 @@
 # Terraform Beginner Bootcamp 2023
 
+## Table of Contents
+- [Installing the Terraform CLI](#nstall-the-terraform-cli)
+- [Refactoring bash scripts](#efectoring-the-bash-scripts)
+- [Linux Permissions](#considerations-for-linux-installations)
+- [Gitpod Lifecycles](#gitpod-lifecycles-before-init-command)
+- [Environment variables](#environment-variables)
+- [Scoping environment variables](#scoping-of-env-vars)
+- [Persisting environment variables in gitpod](#persisiting-env-vars-in-gitpod)
+- [AWS CLI Instalation](#aws-cli-installation)
+- [Basic actions in Terraform](#basic-actions-in-terraform)
+
 **helpful links**
 
 ## Install the Terraform CLI
