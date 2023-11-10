@@ -55,7 +55,44 @@ If we lose our statefile, we most likely have to tear down all cloud infrastruct
 
 If someone modifies/deletes aws/other cloud resources manually, if we run terraform plan again, it will attempt to put our infrastructure back into expected state thus fixing our manual configuration issues
 
+### Fix using Terraform Refresh
+```
+terraform apply -refresh-only --auto-approve
+```
+
 ### Terraform import
+
+## Terraform modules
+resource files declared in the modules should also be declared at the root/top-level files so they are detected when performing terraform actions
+
+### Terraform Module Structure
+It is recommended to place modules into a `modules` directory when locally developing modules 
+
+### Passing input variables
+We can pass input variables to our modules 
+The module has to declare these terraform variables in its own variables.tf 
+```tf
+module "terrahouse_aws" {
+  source="./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+}
+```
+
+### Module sources
+
+Using the source we can import the module from the various places e.g. 
+- locally
+- Github
+- Terraform Registry
+
+```tf
+module "terrahouse_aws" {
+  source="./modules/terrahouse_aws"
+}
+```
+
+- [Modules Sources](https://developer.hashicorp.com/terraform/language/modules/sources)
 
 
 
