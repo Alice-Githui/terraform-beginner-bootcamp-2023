@@ -110,7 +110,7 @@ In Terraform there is a special variable called `path` that allows us to referen
 - path.root = get the path for the root module
 [Reference to named variables](https://developer.hashicorp.com/terraform/language/expressions/references)
 
-```
+```tf
 resource "aws_s3_object" "index_html" {
   bucket = aws_s3_bucket.website_bucket.bucket
   key    = "index.html"
@@ -123,7 +123,7 @@ resource "aws_s3_object" "index_html" {
 
 ### File exists function
 This is a built-in terraform function to check the existence of a file
-```
+```tf
   validation {
     condition     = fileexists(var.error_html_filepath)
     error_message = "The provided path for error.html does not exist."
@@ -132,6 +132,27 @@ This is a built-in terraform function to check the existence of a file
 
 ### filemd5 function
 [filemd5 function in terraform](https://developer.hashicorp.com/terraform/language/functions/filemd5)
+
+
+### Terraform Data sources
+[Hashicorp Data Sources](https://developer.hashicorp.com/terraform/language/data-sources)
+[AWS Caller Identity](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity)
+
+#### Terraform locals
+- Allows us to use source data from cloud resources. This is useful when we want to reference cloud resources without importing them.
+```tf
+data "aws_caller_identity" "current" {}
+```
+[Locals Values](https://developer.hashicorp.com/terraform/language/values/locals)
+
+#### Working with json
+use `json encode` when creating inline policies that will be associated with specific resources - if the policy does not exist on aws
+```
+> jsonencode({"hello"="world"})
+{"hello":"world"}
+
+```
+[Json encode functions](https://developer.hashicorp.com/terraform/language/functions/jsonencode)
 
 
 
