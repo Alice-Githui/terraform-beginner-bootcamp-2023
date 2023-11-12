@@ -1,5 +1,13 @@
 # Terraform Beginner Bootcamp 2023 - Week 1
 
+## Terraform commands
+- terraform init
+- terraform plan
+- terraform apply 
+- terraform apply --auto-approve ***
+- terraform console
+
+
 ## Root Module Structure
   ```
     PROJECT_ROOT
@@ -94,6 +102,36 @@ module "terrahouse_aws" {
 
 - [Modules Sources](https://developer.hashicorp.com/terraform/language/modules/sources)
 
+## Working with files in terraform
+
+### Path variables
+In Terraform there is a special variable called `path` that allows us to reference local paths i.e 
+- path.module = get to the path of the current module
+- path.root = get the path for the root module
+[Reference to named variables](https://developer.hashicorp.com/terraform/language/expressions/references)
+
+```
+resource "aws_s3_object" "index_html" {
+  bucket = aws_s3_bucket.website_bucket.bucket
+  key    = "index.html"
+  source = "${path.root}/public/index.html"
+
+  etag = filemd5(var.index_html_filepath)
+}
+```
+
+
+### File exists function
+This is a built-in terraform function to check the existence of a file
+```
+  validation {
+    condition     = fileexists(var.error_html_filepath)
+    error_message = "The provided path for error.html does not exist."
+  }
+```
+
+### filemd5 function
+[filemd5 function in terraform](https://developer.hashicorp.com/terraform/language/functions/filemd5)
 
 
 
