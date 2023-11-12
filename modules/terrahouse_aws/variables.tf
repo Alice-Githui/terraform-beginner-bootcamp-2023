@@ -25,6 +25,7 @@ variable "index_html_filepath" {
     condition     = fileexists(var.index_html_filepath)
     error_message = "The provided path for index.html does not exist."
   }
+  
 }
 
 variable "error_html_filepath" {
@@ -34,5 +35,15 @@ variable "error_html_filepath" {
   validation {
     condition     = fileexists(var.error_html_filepath)
     error_message = "The provided path for error.html does not exist."
+  }
+}
+
+variable "content_version" {
+  description = "Content versioning for our static website files starting at 1"
+  type = number
+
+  validation {
+    condition = var.content_version > 0 && floor(var.content_version) == var.content_version
+    error_message = "This resource cannot be deployed at this time due to versioning restrictions"
   }
 }
