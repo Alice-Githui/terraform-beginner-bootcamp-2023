@@ -154,5 +154,8 @@ use `json encode` when creating inline policies that will be associated with spe
 ```
 [Json encode functions](https://developer.hashicorp.com/terraform/language/functions/jsonencode)
 
+### The lifecycle meta-argument
+[Lifecycle Meta-argument](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle)
+
 
 
