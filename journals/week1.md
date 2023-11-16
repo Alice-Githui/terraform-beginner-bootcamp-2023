@@ -169,5 +169,26 @@ This will execute commands on the machine running the Terraform commands e.g. pl
 ### Remote Exec
 This will execute commands on the machine which you target. You will need to provide credentials such as SSH to get into the machine 
 
+## FileSets in Terraform
+[FileSets](https://developer.hashicorp.com/terraform/language/functions/fileset)
+
+## Algos in terraform
+### Lists 
+[Terraform Lists](https://developer.hashicorp.com/terraform/language/functions/list)
+
+### for-each expression in terraform
+[for-each](https://developer.hashicorp.com/terraform/language/meta-arguments/for_each)
+used to iterate over something - we used it to iterate over an assets folder and upload images to our static website
+used to iterate over various data sets i.e.
+- maps / objects
+- lists / tuples
+- set
+
+```sh
+[for s in var.list : upper(s)]
+```
+
+used when creating multiples of a cloud resource and you want to reduce the amount of repetitive terraform code
+
 
 
