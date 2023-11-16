@@ -47,3 +47,9 @@ variable "content_version" {
     error_message = "This resource cannot be deployed at this time due to versioning restrictions"
   }
 }
+
+variable "assets_path" {
+  description = "path to our assets folder"
+  type = string
+
+}
