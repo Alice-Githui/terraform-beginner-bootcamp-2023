@@ -157,5 +157,17 @@ use `json encode` when creating inline policies that will be associated with spe
 ### The lifecycle meta-argument
 [Lifecycle Meta-argument](https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle)
 
+## Provisioners
+
+[Provisioners as a last resort](https://developer.hashicorp.com/terraform/language/resources/provisioners/syntax)
+Provisioners allow you to execute commands on compute instances e.g. AWS CLI command. 
+They are not recommended for use by Hashicorp because configuration management tools such as Ansible are a better fit but the functionality exists.
+
+### Local Exec
+This will execute commands on the machine running the Terraform commands e.g. plan apply
+
+### Remote Exec
+This will execute commands on the machine which you target. You will need to provide credentials such as SSH to get into the machine 
+
 
 
