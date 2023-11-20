@@ -1,13 +1,11 @@
 terraform {
-  # cloud {
-  #   organization = "Alices_World"
+  cloud {
+    organization = "Alices_World"
 
-  #   workspaces {
-  #     name = "terra-house-1"
-  #   }
-  # }
-
-  
+    workspaces {
+      name = "terraform-cloud"
+    }
+  }
 }
 
 module "terrahouse_aws" {
